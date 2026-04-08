@@ -517,6 +517,7 @@ GameObject:
   - component: {fileID: 618864927}
   - component: {fileID: 618864926}
   - component: {fileID: 618864925}
+  - component: {fileID: 618864929}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -644,6 +645,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618864923}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &618864929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618864923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df1f646d52e870b478a9ac8ef9d9a381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanFly
 --- !u!1 &641089159
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +888,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11467cc0d12b00643add178ad6d68ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestScript
+  Fireball: {fileID: 1407382160978677385, guid: 03f567d6b02dff245a94793204be8ce4, type: 3}
+  WandTip: {fileID: 480421904}
+  Force: {x: 0, y: 500, z: 2000}
 --- !u!4 &1337243301
 Transform:
   m_ObjectHideFlags: 0
@@ -906,6 +922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   WandTip: {fileID: 480421904}
+  LevitateMultiplier: 1
+  yOffset: 1
 --- !u!1001 &1846715128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1014,7 +1032,8 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 13.11
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9020295726626514353, guid: 392970337d03ee3498fc2bba981eed3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
