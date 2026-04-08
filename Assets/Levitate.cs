@@ -3,7 +3,7 @@ using UnityEngine;
 public class Levitate : MonoBehaviour
 {
     public GameObject WandTip;
-    public float LevitateMultiplier = 1.0f;
+
     private Vector3 LevitateForce;
     private Vector3 hitObjectPosition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,8 +27,8 @@ public class Levitate : MonoBehaviour
                 Debug.Log("canfly");
                 cf.DisableGravity();
                 hitObjectPosition = hit.collider.gameObject.transform.position;
-                Vector3 WandXY = new Vector3(WandTip.transform.position.x, WandTip.transform.position.y, hitObjectPosition.z);
-                hit.collider.gameObject.transform.position = Vector3.Lerp(hitObjectPosition, WandXY, LevitateMultiplier * Time.deltaTime);
+                Vector3 WandXY = new Vector3(hit.point.x, hit.point.y, hitObjectPosition.z);
+                cf.TriggerAttraction(WandXY);
             }
         }
     }

@@ -3,9 +3,15 @@ using UnityEngine;
 public class CanFly : MonoBehaviour
 {
     private Rigidbody rb ;
-    private float TimerGravity = 5.0f;
+    private float TimerGravity = 2.0f;
     private float currentTimerGravity = 0.0f;
+    private float TimerAttraction = 1.0f;
+    private float currentTimerAttraction = 0.0f;
     private bool GravityDisabled = false;
+    private bool AttractionTriggered = false;
+    private float AttractionSpeed = 1.0f;
+
+    private Vector3 TargetPosition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,6 +30,15 @@ public class CanFly : MonoBehaviour
                 GravityDisabled = false;
             }
         }
+        if(AttractionTriggered == true)
+        {
+            currentTimerAttraction += Time.deltaTime;
+            transform.position = Vector3.Lerp(transform.position, TargetPosition, AttractionSpeed * Time.deltaTime);
+            if(currentTimerAttraction >= TimerAttraction)
+            {
+                AttractionTriggered = false;
+            }
+        }
     }
 
     public void DisableGravity()
@@ -31,5 +46,12 @@ public class CanFly : MonoBehaviour
         GravityDisabled = true;
         rb.useGravity = false;
         currentTimerGravity = 0.0f;
+    }
+
+    public void TriggerAttraction(Vector3 TargetPos)
+    {
+        AttractionTriggered = true;
+        currentTimerAttraction = 0.0f;
+        TargetPosition = TargetPos;
     }
 }
