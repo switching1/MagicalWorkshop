@@ -27,7 +27,7 @@ public class Levitate : MonoBehaviour
                 Debug.Log("canfly");
                 cf.DisableGravity();
                 hitObjectPosition = hit.collider.gameObject.transform.position;
-                Vector3 WandXY = new Vector3(hit.point.x, hit.point.y, hitObjectPosition.z);
+                Vector3 WandXY = new Vector3(hit.point.x, hit.point.y + 0.5f, hitObjectPosition.z);
                 cf.TriggerAttraction(WandXY);
             }
         }

@@ -4,10 +4,10 @@ public class TestScript : MonoBehaviour
 {
     public GameObject Fireball;
     public GameObject WandTip;
-    public Vector3 Force;
+    public float FireballSpeed;
+    private Vector3 Force;
     private Vector3 Origin;
     private Vector3 Target;
-    private float range = 0.0f;
     private float speed = 1.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,7 +46,9 @@ public class TestScript : MonoBehaviour
         {
             GameObject FireBallInstance = Instantiate(Fireball, WandTip.transform.position, Quaternion.identity);
             Rigidbody rb = FireBallInstance.GetComponent<Rigidbody>();
-            rb.AddForce(Force);
+            Force = (WandTip.transform.position - Camera.main.transform.position) * FireballSpeed;
+            Debug.Log(Force);
+            rb.AddForce(Force, ForceMode.VelocityChange);
             Destroy(FireBallInstance, 5.0f);
         }
         Target = point;

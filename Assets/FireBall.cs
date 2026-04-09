@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CanBeLiten : MonoBehaviour
+public class FireBall : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,9 +13,12 @@ public class CanBeLiten : MonoBehaviour
     {
         
     }
-
-    public void LiteUp()
+    void  OnTriggerEnter(Collider other)
     {
-        Debug.Log("Liten!");
+            CanBeLiten cbl = other.GetComponent<CanBeLiten>();
+            if(cbl != null)
+        {
+            cbl.LiteUp();
+        }
     }
 }
