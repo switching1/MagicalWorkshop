@@ -17,5 +17,6 @@ public class CanBeLiten : MonoBehaviour
     public void LiteUp()
     {
         Debug.Log("Liten!");
+        gameObject.transform.GetChild(0).gameObject.SetActive(true);
     }
 }

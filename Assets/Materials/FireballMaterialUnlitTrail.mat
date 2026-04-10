@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FlareMaterial
+  m_Name: FireballMaterialUnlitTrail
   m_Shader: {fileID: -6465566751694194690, guid: 228ce3e8b41224348bee4e8e0b06683f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -28,7 +28,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTexture:
-        m_Texture: {fileID: 2800000, guid: f8bbb01a418f9174dbaa9029cfa2b443, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0ccec2831b1d73d4e9f557e3c7d39bf7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -52,7 +52,7 @@ Material:
     - _Cull: 2
     - _DstBlend: 1
     - _DstBlendAlpha: 1
-    - _Power: 1
+    - _Power: 0.99
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SrcBlend: 5
@@ -62,9 +62,9 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _Color: {r: 0.14150941, g: 0.016509432, b: 0, a: 1}
-    - _MainTextureSpeed: {r: 0, g: 0, b: 0, a: 0}
-    - _MainTextureTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Color: {r: 0, g: 0.846498, b: 1.8867924, a: 1}
+    - _MainTextureSpeed: {r: 0, g: 0.1, b: 0, a: 0}
+    - _MainTextureTiling: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5597640363133920853

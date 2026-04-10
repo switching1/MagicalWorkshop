@@ -41,7 +41,7 @@ TrailRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860464529367728376}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -464,7 +464,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.68
+      scalar: 0.32
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5112,7 +5112,7 @@ TrailRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2630765171027416980}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
