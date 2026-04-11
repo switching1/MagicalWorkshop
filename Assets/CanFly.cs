@@ -26,6 +26,7 @@ public class CanFly : MonoBehaviour
             currentTimerGravity += Time.deltaTime;
             if(currentTimerGravity >= TimerGravity)
             {
+                gameObject.transform.GetChild(0).gameObject.SetActive(true);
                 rb.useGravity = true;
                 GravityDisabled = false;
             }
@@ -50,6 +51,7 @@ public class CanFly : MonoBehaviour
 
     public void TriggerAttraction(Vector3 TargetPos)
     {
+        gameObject.transform.GetChild(0).gameObject.SetActive(true);
         AttractionTriggered = true;
         currentTimerAttraction = 0.0f;
         TargetPosition = TargetPos;

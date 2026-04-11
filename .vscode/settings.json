@@ -67,6 +67,11 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "MW.slnx",
-    "dotnet.enableWorkspaceBasedDevelopment": false
+    "dotnet.defaultSolution": "MagicalWorkshop.slnx",
+    "dotnet.enableWorkspaceBasedDevelopment": false,
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.workspaceSearchPaths": [
+        "./**/.venv",
+        "C:\\Users\\Centa\\Documents\\correctENV\\.venv"
+    ]
 }

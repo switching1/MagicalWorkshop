@@ -28,6 +28,7 @@ while True:
             data.extend([lm[0], h - lm[1], lm[2]])
 
         sock.sendto(str.encode(str(data)), serverAddressPort)
+        
 
     # Display
     cv2.imshow("Image", img)

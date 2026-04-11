@@ -42,8 +42,23 @@ public class HandTracking : MonoBehaviour
             handPoints[8].transform.localPosition.x - handPoints[4].transform.localPosition.x,
             handPoints[8].transform.localPosition.x - handPoints[4].transform.localPosition.x,
             handPoints[8].transform.localPosition.x - handPoints[4].transform.localPosition.x);
-        print("distance index et pouce " + difference);  
 
 
+        Vector3 difference_petitdoigt_poignet = new Vector3(
+            handPoints[20].transform.localPosition.x - handPoints[0].transform.localPosition.x,
+            handPoints[20].transform.localPosition.x - handPoints[0].transform.localPosition.x,
+            handPoints[20].transform.localPosition.x - handPoints[0].transform.localPosition.x);
+
+        Vector3 difference_annuaire_poignet = new Vector3(
+            handPoints[16].transform.localPosition.x - handPoints[0].transform.localPosition.x,
+            handPoints[16].transform.localPosition.x - handPoints[0].transform.localPosition.x,
+            handPoints[16].transform.localPosition.x - handPoints[0].transform.localPosition.x);
+
+                    Vector3 difference_majeur_poignet = new Vector3(
+            handPoints[12].transform.localPosition.x - handPoints[0].transform.localPosition.x,
+            handPoints[12].transform.localPosition.x - handPoints[0].transform.localPosition.x,
+            handPoints[12].transform.localPosition.x - handPoints[0].transform.localPosition.x);
+
+            print("diff maj poignet" + difference_majeur_poignet);
     }
 }

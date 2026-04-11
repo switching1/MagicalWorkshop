@@ -4,6 +4,7 @@ public class Levitate : MonoBehaviour
 {
     public GameObject WandTip;
     public GameObject LevitateParticleSystem;
+    public AudioSource levitateSound; 
     public float levitateCooldown = 0.3f;
     private float levitateTime = 0.0f;
     private bool leviateParticlePossible = true;
@@ -34,14 +35,15 @@ public class Levitate : MonoBehaviour
                 hitObjectPosition = hit.collider.gameObject.transform.position;
                 Vector3 WandXY = new Vector3(hit.point.x, hit.point.y + 0.5f, hitObjectPosition.z);
                 cf.TriggerAttraction(WandXY);
-
-                if(levitateTime > levitateCooldown)
-                {
-                GameObject LevitateParticleSystemInstance = Instantiate(LevitateParticleSystem, WandTip.transform.position, Quaternion.identity);
-                Vector3 randomOffset = new Vector3(UnityEngine.Random.Range(-1, 1), UnityEngine.Random.Range(-1, 1), UnityEngine.Random.Range(-1, 1));
-                LevitateParticleSystemInstance.GetComponent<LevitateParticleSystem>().EndPosition = hit.point + randomOffset * 0.5F;
-                levitateTime = 0.0f;
-                }
+                levitateSound.Play();
+                // if(levitateTime > levitateCooldown)
+                // {
+                
+                // GameObject LevitateParticleSystemInstance = Instantiate(LevitateParticleSystem, WandTip.transform.position, Quaternion.identity);
+                // Vector3 randomOffset = new Vector3(UnityEngine.Random.Range(-1, 1), UnityEngine.Random.Range(-1, 1), UnityEngine.Random.Range(-1, 1));
+                // LevitateParticleSystemInstance.GetComponent<LevitateParticleSystem>().EndPosition = hit.point + randomOffset * 0.5F;
+                // levitateTime = 0.0f;
+                // }
             }
         }
     }
